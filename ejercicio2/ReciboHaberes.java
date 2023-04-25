@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package direccion;
 
-/**
- *
- * @author ET36
- */
 public class ReciboHaberes {
-    
+    private Empleado empleado;
+
+    public ReciboHaberes(Empleado e){
+        this.empleado = e;
+    }
+
+
+
+    public void mostrarRecibo(){
+        empleado.MostrarDatos();
+    }
 }
