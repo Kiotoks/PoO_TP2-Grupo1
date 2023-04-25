@@ -68,6 +68,7 @@ public class SueldoNeto {
     public void setSueldoBasico(double sueldoBasico) {
         this.sueldoBasico = sueldoBasico;
     }
+
     public double CalcularSueldo(){
         if(puesto.equals("panadero")){
             sueldoBasico = 98000;
@@ -80,12 +81,12 @@ public class SueldoNeto {
             sueldoBasico = 70000;
         }
         
-        sueldoBasico -= 3*sueldoBasico/100;
-        sueldoBasico -= 11*sueldoBasico/100;
-        sueldoBasico += 10*sueldoBasico/100;
-        sueldoBasico += asignacion;
+        sueldoNeto -= 3*sueldoBasico/100;
+        sueldoNeto -= 11*sueldoBasico/100;
+        sueldoNeto += 10*sueldoBasico/100;
+        sueldoNeto += asignacion;
         
-        return sueldoBasico;
+        return sueldoNeto;
     }
     public double PlusReposHom(){
         double plus = 0;
@@ -100,7 +101,8 @@ public class SueldoNeto {
         return plus;
     }
     public void mostrarSueldo(){
-        System.out.println("El sueldo es: "+sueldoBasico);
+        System.out.println("El sueldo basico es: "+ sueldoBasico + " Obra Social -" + (3*sueldoBasico/100) + ", Jubilacion -" + (11*sueldoBasico/100) +
+        ", Asignacion familiar +" + (asignacion) + ", Presentismo +" + (10*sueldoBasico/100) + " Sueldo Neto: " + sueldoNeto);
     }
      
 }
