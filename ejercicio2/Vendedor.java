@@ -1,19 +1,19 @@
 package ejercicio2;
 
 public class Vendedor extends Empleado{
-    private double ingresosVentas;
+    private int cantVentas;
     
-    public Vendedor(String n, int c, Direccion d, int t, SueldoNeto s, double i){
+    public Vendedor(String n, int c, Direccion d, int t, SueldoNeto s, int cant){
         super(n, c, d, t, s);
-        this.ingresosVentas = i;
+        this.cantVentas = cant;
     }
 
-    public double getIngresosVentas() {
-        return ingresosVentas;
+    public double getCantVentas() {
+        return cantVentas;
     }
 
-    public void setIngresosVentas(double ingresosVentas) {
-        this.ingresosVentas = ingresosVentas;
+    public void setCantVentas(int cant) {
+        this.cantVentas = cant;
     }
 
 }
