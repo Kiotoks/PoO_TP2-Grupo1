@@ -56,6 +56,6 @@ public class Empleado {
     
     public void MostrarDatos(){
         System.out.println("El nombre del empleado es: "+nombre+" CUIT: "+cuit+", "
-        + "la direccion: "+direccion+" el telefono: "+telefono+" y su sueldo: "+sueldo);
+        + "la direccion: "+direccion+" el telefono: "+telefono+" y su sueldo: "+sueldo.CalcularSueldo());
     }
 }
