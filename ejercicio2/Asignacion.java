@@ -3,9 +3,8 @@ public class Asignacion {
     private int cantHijos;
     private int asignacionFamiliar = 11465;
     
-    public Asignacion(int c, int a){
+    public Asignacion(int c){
         this.cantHijos = c;
-        this.asignacionFamiliar = a;
     }
 
     public int getCantHijos() {
