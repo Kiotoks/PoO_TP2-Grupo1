@@ -6,7 +6,6 @@ public class SueldoNeto {
     private char genero;
     private String puesto;
     private double sueldoBasico;
-    private int sueldo;
     
     public SueldoNeto(char g, String puesto, Asignacion a){
         this.genero = g;
@@ -71,27 +70,37 @@ public class SueldoNeto {
     }
     public double CalcularSueldo(){
         if(puesto.equals("panadero")){
-            sueldo = 98000;
+            sueldoBasico = 98000;
         }
         if(puesto.equals("repostero")){
-            sueldo = 110000;
+            sueldoBasico = 110000;
+            PlusReposHom();
         }
         if(puesto.equals("vendedor")){
-            sueldo = 70000;
+            sueldoBasico = 70000;
         }
         
-        sueldo -= 3*sueldo/100;
-        sueldo -= 11*sueldo/100;
-        sueldo += 10*sueldo/100;
-        sueldo += asignacion;
+        sueldoBasico -= 3*sueldoBasico/100;
+        sueldoBasico -= 11*sueldoBasico/100;
+        sueldoBasico += 10*sueldoBasico/100;
+        sueldoBasico += asignacion;
         
-        return sueldo;
+        return sueldoBasico;
     }
-    public double PlusReposHorn(){
-        return 0;
+    public double PlusReposHom(){
+        double plus = 0;
+        String gen = String.valueOf(genero);
+        if(gen.equals("m")){
+            plus += sueldoBasico*10/100;
+        }
+        else{
+            plus = 0;
+        }
+        
+        return plus;
     }
     public void mostrarSueldo(){
-        System.out.println(sueldoBasico);
+        System.out.println("El sueldo es: "+sueldoBasico);
     }
      
 }
