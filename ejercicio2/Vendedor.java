@@ -16,4 +16,7 @@ public class Vendedor extends Empleado{
         this.cantVentas = cant;
     }
 
+    public double comision(){
+        
+    }
 }

@@ -79,6 +79,7 @@ public class SueldoNeto {
         }
         if(puesto.equals("vendedor")){
             sueldoBasico = 70000;
+            
         }
         
         sueldoNeto -= 3*sueldoBasico/100;

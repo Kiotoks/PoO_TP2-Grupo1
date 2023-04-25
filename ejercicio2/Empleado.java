@@ -13,6 +13,7 @@ public class Empleado {
         this.direccion = d;
         this.telefono = t;
         this.sueldo = s;
+        
     }
     
     public void setNombre(String n){

@@ -16,6 +16,12 @@ public class ReciboHaberes {
     }
 
     public void mostrarRecibo(){
+        
+        if(empleado.getSueldo.getPuesto.equals("vendedor") && empleado.getSueldo.getGenero.equals("m")){
+            
+        }
+        else{
         empleado.MostrarDatos();
+        }
     }
 }
